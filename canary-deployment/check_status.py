@@ -12,7 +12,7 @@ version_a = sys.argv[3]
 version_b = sys.argv[4]
 
 r = requests.get("http://{}/api/v1/query".format(ip), params={"query":
-    'sum(rate(istio_requests_total{destination_service="hello-world.{}.svc.cluster.local"}[1m])) by (response_code, destination_version)'.format(user)})
+    'sum(rate(istio_requests_total{{destination_service="hello-world.{}.svc.cluster.local"}}[1m])) by (response_code, destination_version)'.format(user)})
 results = r.json()["data"]["result"]
 
 
