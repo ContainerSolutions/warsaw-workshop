@@ -1,2 +1,3 @@
-# warsaw-workshop
-repository to share with workshop participants
+# Deployment Strategy Workshop
+
+The repository to share with workshop participants.
